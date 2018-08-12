@@ -1,6 +1,6 @@
 // Project 3
 // by Sumaiya Tabassum
-// CS 368 - Computer Graphics
+// CS 368 - Computer Graphics - Summer 2018
 
 #include <stdlib.h>
 #include <OpenGL/gl.h>
