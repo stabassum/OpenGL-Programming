@@ -10,3 +10,6 @@
 
 <p>https://www.opengl.org/</p>
 <p>https://medium.com/@wrongway4you/what-is-opengl-and-how-to-start-learning-it-34f19cfa219f</p>
+<p>http://www.cplusplus.com/</p>
+<p>https://developer.apple.com/xcode/</p>
+
