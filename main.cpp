@@ -403,7 +403,6 @@ void keyboard(unsigned char key, int x, int y) {
             
             // exit the program
         case 'x':
-            
             exit(0);
             break;
     }
@@ -427,6 +426,7 @@ void Arrow_Keys(int key, int x, int y) {
              dt = dt - 0.1;
             if (dt <= -1) dt = -1;
             break;
+            
     }
     glutPostRedisplay();
     
