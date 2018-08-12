@@ -1,6 +1,6 @@
 // Project 3
 // by Sumaiya Tabassum
-// CS 368 - Computer Graphics - Summer 2018
+// CS 368 - Computer Graphics
 
 #include <stdlib.h>
 #include <OpenGL/gl.h>
@@ -401,8 +401,8 @@ void keyboard(unsigned char key, int x, int y) {
             }
             break;
             
-            // exit the program
-        case 'x':
+            // quit the program
+        case 'q':
             exit(0);
             break;
     }
@@ -417,16 +417,15 @@ void Arrow_Keys(int key, int x, int y) {
             
             // speed up and go forward
         case GLUT_KEY_UP:
-            dt = dt + 0.1;
-            if (dt >= 5) dt = 5;
+            dt = dt + 0.95;
+            if (dt >= 7) dt = 7;
             break;
             
             // slow down and eventually go backwards
         case GLUT_KEY_DOWN:
-             dt = dt - 0.1;
+             dt = dt - 0.95;
             if (dt <= -1) dt = -1;
             break;
-            
     }
     glutPostRedisplay();
     
