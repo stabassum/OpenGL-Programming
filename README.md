@@ -1,4 +1,4 @@
-# OpenGL-Programming
+# OpenGL-Programming - Space Objects
 
 <h4>A Little About the Program</h4>
 
