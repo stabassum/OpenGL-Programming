@@ -32,40 +32,28 @@ GLfloat front_amb_diff_planetGreen[] = { 0.05, 1.14, 0.01, 1.0 }; //greyish
 
 GLfloat front_amb_diff_roadInSpace[] = { 0.7, 0.7, 0.7, 0.0 }; //greyish
 
-// GLfloat front_amb_diff_ringInSpace[] = {0.7, 0.732, 0.7143, 0.0919}; //whitish
-
 GLfloat spe[] = { 0.25, 0.25, 0.25, 1.0 }; // Property for front and back
 
 GLfloat theta = 0, theta_rotate = 0, dt = 0.5, axes[3][3] = { { 1,0,0 },{ 0,1,0 },{ 0,0,1 } };
-GLfloat pauseSpeed;
+GLfloat s;
 GLdouble b = 1.1;
 int axis = 0;
 
-// road in space
+// Road in space
+
 void roadInSpace(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_roadInSpace);
     
     glPushMatrix();
-    //      glRotated(theta_rotate, -1, 0, 0);
     glTranslated(0.0, -3.50, -7.0);
     glutSolidCone(2.9, 0.2989, 3, 4); // Define object and size
     glPopMatrix();
 }
 
-// ring in space
-//void ringsInSpace(void)
-//{
-//    glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_ringInSpace);
-//
-//    glPushMatrix();
-//    glTranslated(-.7, .4, 0.3);
-//
-//    glutSolidTorus(0.048, 1.2, 50, 70); // Define object and size
-//    glPopMatrix();
-//}
+// Star
 
-void spaceRock1(void)
+void star1(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_star);
     
@@ -78,8 +66,9 @@ void spaceRock1(void)
     glPopMatrix();
 }
 
-// star
-void spaceRock2(void)
+// Star
+
+void star2(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_star);
     
@@ -92,8 +81,9 @@ void spaceRock2(void)
     glPopMatrix();
 }
 
-// star
-void spaceRock3(void)
+// Star
+
+void star3(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_star);
     
@@ -106,8 +96,9 @@ void spaceRock3(void)
     glPopMatrix();
 }
 
-// star
-void spaceRock4(void)
+// Star
+
+void star4(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_star);
     
@@ -120,8 +111,9 @@ void spaceRock4(void)
     glPopMatrix();
 }
 
-// star
-void spaceRock5(void)
+// Star
+
+void star5(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_star);
     
@@ -134,8 +126,9 @@ void spaceRock5(void)
     glPopMatrix();
 }
 
-// star
-void spaceRock6(void)
+// Star
+
+void star6(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_star);
     
@@ -148,8 +141,9 @@ void spaceRock6(void)
     glPopMatrix();
 }
 
-// star
-void spaceRock7(void)
+// Star
+
+void star7(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_star);
     
@@ -162,8 +156,9 @@ void spaceRock7(void)
     glPopMatrix();
 }
 
-// star
-void spaceRock8(void)
+// Star
+
+void star8(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_star);
     
@@ -176,8 +171,9 @@ void spaceRock8(void)
     glPopMatrix();
 }
 
-// star
-void spaceRock9(void)
+// Star
+
+void star9(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_star);
     
@@ -190,8 +186,9 @@ void spaceRock9(void)
     glPopMatrix();
 }
 
-// star
-void spaceRock10(void)
+// Star
+
+void star10(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_star);
     
@@ -204,7 +201,8 @@ void spaceRock10(void)
     glPopMatrix();
 }
 
-// Big planet
+// Rolling planet
+
 void planetRollingOnRoad(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT, front_amb_diff_Planet2);
@@ -220,7 +218,8 @@ void planetRollingOnRoad(void)
     }
 }
 
-// Big planet
+// Rolling planet
+
 void planetRollingOnRoad2(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT, front_amb_diff_planetGreen);
@@ -236,6 +235,7 @@ void planetRollingOnRoad2(void)
 }
 
 // Make an method objectSpehere to use in making planet
+
 void objectSphere(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_bigCircle);
@@ -249,6 +249,7 @@ void objectSphere(void)
 }
 
 // Make a ring to use for planet making
+
 void objectTorus(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_ring);
@@ -262,6 +263,7 @@ void objectTorus(void)
 }
 
 // Make sphere for planet making
+
 void objectSpherePlanet(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_planetPurple1);
@@ -275,6 +277,7 @@ void objectSpherePlanet(void)
 }
 
 // Make ring for plant making
+
 void objectTorusForSphere(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_planetPurple2);
@@ -288,6 +291,7 @@ void objectTorusForSphere(void)
 }
 
 // Make another ring for planet making, used for planet with two rings
+
 void objectTorusForSphere1(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_planetPurple2);
@@ -301,6 +305,7 @@ void objectTorusForSphere1(void)
 }
 
 // Make a blue planet
+
 void objectSmallSphere(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_planet);
@@ -313,7 +318,8 @@ void objectSmallSphere(void)
     glPopMatrix();
 }
 
-// make a moon
+// Make a moon
+
 void tinySphere(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_moon); // color of moon
@@ -326,7 +332,8 @@ void tinySphere(void)
     glPopMatrix();
 }
 
-// green planet
+// Green planet
+
 void tinyPlanet(void)
 {
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff_planetGreen);
@@ -340,35 +347,37 @@ void tinyPlanet(void)
 }
 
 // Add the space objects to the display
+
 void display(void) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
-    spaceRock1(); // star
-    spaceRock2(); // star
-    spaceRock3(); // star
-    spaceRock4(); // star
-    spaceRock5(); // star
-    spaceRock6(); // star
-    spaceRock7(); // star
-    spaceRock8(); // star
-    spaceRock9(); // star
-    spaceRock10(); // star
-    objectSphere(); // sphere for planet
-    objectTorus(); // ring for planet
-    objectSmallSphere(); // blue planet
-    tinySphere(); //moon
-    tinyPlanet(); // green planet
-    objectSpherePlanet(); // sphere for planet
-    objectTorusForSphere(); // ring for planet
-    objectTorusForSphere1(); // ring for planet
-    planetRollingOnRoad(); // big pinkish-purple planet
-    planetRollingOnRoad2();
-    roadInSpace();
-    //    ringsInSpace();
+    roadInSpace(); // Road in space
+    star1(); // Star
+    star2(); // Star
+    star3(); // Star
+    star4(); // Star
+    star5(); // Star
+    star6(); // Star
+    star7(); // Star
+    star8(); // Star
+    star9(); // Star
+    star10(); // Star
+    objectSphere(); // Sphere for planet
+    objectTorus(); // Ring for planet
+    objectSmallSphere(); // Blue planet
+    tinySphere(); // Moon
+    tinyPlanet(); // Green planet
+    objectSpherePlanet(); // Sphere for planet
+    objectTorusForSphere(); // Ring for planet
+    objectTorusForSphere1(); // Ring for planet
+    planetRollingOnRoad(); // Rolling planet
+    planetRollingOnRoad2(); // Rolling planet
+    
     glutSwapBuffers();
 }
 
-// rotation
+// Rotation
+
 void idle(void)
 {
     theta = (theta < 360) ? theta + dt : dt;
@@ -376,103 +385,75 @@ void idle(void)
     glutPostRedisplay();
 }
 
+// Keyboard functions
+
 void keyboard(unsigned char key, int x, int y) {
     
     switch (key) {
             
+            // pause program
         case ' ':
-            
             if (dt == 0)
-                
-                dt = pauseSpeed;
-            
+                dt = s;
             else {
-                
-                pauseSpeed = dt;
-                
+                s = dt;
                 dt = 0;
-                
             }
-            
             break;
             
+            // exit the program
         case 'x':
             
             exit(0);
-            
             break;
-            
     }
-    
     glutPostRedisplay();
-    
 }
 
+// Arrow key functions
 
-
-void Up_Down_key(int key, int x, int y) {
+void Arrow_Keys(int key, int x, int y) {
     
     switch (key) {
             
+            // speed up and go forward
         case GLUT_KEY_UP:
-            
-            if (dt >= 5) {
-                
-                dt = 5;
-                
-            }
-            
-            else
-                
-                dt = dt + 0.1;
-            
+            dt = dt + 0.1;
+            if (dt >= 5) dt = 5;
             break;
             
+            // slow down and eventually go backwards
         case GLUT_KEY_DOWN:
-            
-            if (dt <= -1) {
-                
-                dt = -1;
-                
-            }
-            
-            else
-                
-                dt = dt - 0.1;
-            
+             dt = dt - 0.1;
+            if (dt <= -1) dt = -1;
             break;
-            
     }
-    
     glutPostRedisplay();
     
 }
 
+// User guide messages for program and keyboard functions
 
-
-void instructions() {
+void keyBoardFunctions() {
     
-    cout << "Movement of center two planets.\n\n\n" << endl;
+    cout << "Movement of center two planets.\n\n" << endl;
     
     cout << "Keyboard Functions:\n " << endl;
     
-    cout << "Up Arrow - \taccelerate. (max Speed: 3)\n";
+    cout << "Up Arrow - Speed up movement of center planets and move forward. (max Speed: 3)\n";
     
-    cout << "Down Arrow- \tdecelerate. (min Speed: -1)\n";
+    cout << "Down Arrow - Slow down movement of center planets and eventually move backwards. (min Speed: -1)\n";
     
-    cout << "Space - \t\tstop / resume.\n";
+    cout << "Space - Pause the program \n";
     
-    cout << "x - \t\t\tterminate the program.\n";
+    cout << "x - Exit the program.\n";
     
     cout << "\n\nNote: No objects in space will be affected except the center planets" << endl;
     
 }
 
-
-// User guide messages for program and keyboard shortcuts
-
-
 // Main program
+
 int main(int argc, char ** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
@@ -495,15 +476,13 @@ int main(int argc, char ** argv) {
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
     
-    glutSpecialFunc(Up_Down_key); // keyboard function
+    glutSpecialFunc(Arrow_Keys); // keyboard function
     
     glutKeyboardFunc(keyboard);
     
     glutDisplayFunc(display); // visual display function
     
     glutIdleFunc(idle);
-    instructions();// initial message to guide user
+    keyBoardFunctions();// initial message to guide user
     glutMainLoop();
 }
-
-
